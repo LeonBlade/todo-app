@@ -3,3 +3,4 @@ node_modules/*
 dist/*
 main.css
 main.css.map
+firebase.json

@@ -44,6 +44,27 @@ You can manually navigate to the dist folder if you have bundled the project, or
 The command above just gets rid of the output and puts it in the background.  To bring serve back to the 
 foreground you can just run  ```fg``` in the window and then cancel it or whatever you want to do.
 
+## Depoy
+Firebase tools is included as a dependency and will install with ```npm install```.
+If you would like to deploy this on Firebase you'll need to run the following command
+
+```
+firebase init
+```
+
+Ensure to select ```dist``` for the folder to deploy when going through the options, you can change
+this manually in the ```firebase.json``` file that will be created.
+
+To deploy to Firebase, just run the command
+
+```
+firebase deploy
+```
+
+Note that of course you still need a Firebase account and application to use.  This application 
+simply has one array called ```todos``` where all of the todos go.  If you want to extend the use
+of this app you'll need to change the URL references in the files for your environment. 
+
 ## Final Thoughts
 This is just an experiment, not an example of best practicies.  This is my first project using all of these tools
 including React, so there may have been better ways to achieve a solution.
@@ -52,5 +73,4 @@ There are a few components that I made to make my life easier.  One in particula
 SVGTextMask which will create a punchout text effect that should work in almost any browser because it uses SVG and 
 not a webkit prefixed CSS style that doesn't even work for how it's being used in this application.
 
-If there's anything you can take away from this project, it's the implementation of the ghost button, as 
-it's probably one one of my favorite aspects of the project to be honest.
+If there's anything you can take away from this project, it's the implementation of the ghost button, as it's probably one one of my favorite aspects of the project to be honest.
