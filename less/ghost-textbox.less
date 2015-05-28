@@ -1,0 +1,29 @@
+input[type=text],
+input[type=password] {
+	background: rgba(255, 255, 255, 0.05);
+	color: white;
+	border: 2px solid white;
+	border-radius: 2px;
+	font-size: 12pt;
+	padding: 15px 20px;
+	margin: 5px;
+	height: 52px;
+	outline: none;
+}
+
+.input-placeholder() {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+	.input-placeholder();
+}
+::-moz-input-placeholder {
+	.input-placeholder();
+}
+:-moz-input-placeholder {
+	.input-placeholder();
+}
+:-ms-input-placeholder {
+	.input-placeholder();
+}

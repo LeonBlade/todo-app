@@ -1,0 +1,116 @@
+@import "variables.less";
+@import "ghost-button.less";
+@import "ghost-checkbox.less";
+@import "ghost-textbox.less";
+@import "svg-text-mask.less";
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Source Sans Pro", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+	color: white;
+	background: @fontColor;
+	background: linear-gradient(to bottom right, @bgColor1, @bgColor2);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#background {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom right, @bgColor1, @bgColor2);
+	z-index: -1;
+
+	#background-svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 5px 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	.delete-btn {
+		cursor: pointer;
+		display: none;
+	}
+	&:hover {
+		.delete-btn {
+			display: inline-block;
+		}
+	}
+}
+
+hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, rgba(255, 255, 255, 0));
+}
+
+div.loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.app {
+	width: 500px;
+	border: 2px solid white;
+	border-radius: 2px;
+	padding: 20px;
+	margin: 50px auto;
+}
+
+.todo-text {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+}
+
+.todo-timestamp {
+	font-size: small;
+	border-radius: 2px;
+	background: white;
+	padding: 2px 5px;
+	margin: 5px;
+	color: @fontColor;
+	min-width: 40px;
+	display: inline-block;
+	text-align: center;
+	height: 20px;
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+}
+
+footer {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: flex;
+}
+
+.stretch {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+}

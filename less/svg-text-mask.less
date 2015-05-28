@@ -1,0 +1,38 @@
+.svg-text-mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	text {
+		text-anchor: middle;
+		dominant-baseline: central;
+		&#baseText {
+			fill: white;
+		}
+	}
+
+	rect#alpha {
+		fill: white;
+		width: 100%;
+		height: 100%;
+	}
+
+	rect#base {
+		mask: none;
+		-webkit-mask: none;
+		fill: transparent;
+	}
+
+	&:hover {
+		rect#base {
+			mask: url('#mask');
+			-webkit-mask: url('#mask');
+			fill: white;
+		}
+		text#baseText {
+			display: none;
+		}
+	}
+}

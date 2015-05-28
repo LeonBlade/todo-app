@@ -1,0 +1,40 @@
+.ghost-checkbox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: flex;
+
+	align-items: center;
+	-webkit-align-items: center;
+
+	input[type=checkbox] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: 2px solid white;
+		margin: 5px;
+		outline: none;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border-radius: 2px;
+		&:active {
+			background: rgba(255, 255, 255, 0.5);
+		}
+		&:after {
+			content: ' ';
+			position: absolute;
+			left: 2px;
+			top: 2px;
+			right: 2px;
+			bottom: 2px;
+		}
+		&:hover:after {
+			background: rgba(255, 255, 255, 0.25);
+		}
+		&:checked:after {
+			background-color: white;
+		}
+	}
+}

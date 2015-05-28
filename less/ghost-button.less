@@ -1,0 +1,26 @@
+@import "variables.less";
+
+.ghost-btn {
+	font-size: 12pt;
+	margin: 5px;
+	padding: 15px 20px;
+	height: 52px;
+	border: 2px solid white;
+	color: white;
+	background: transparent;
+	text-transform: uppercase;
+	border-radius: 2px;
+	font-weight: 900;
+	outline: none;
+	position: relative;
+	min-width: 100px;
+
+	&.ghost-btn-black {
+		border-color: black;
+		color: black;
+		&:hover {
+			background: black;
+			color: @fontColor;
+		}
+	}
+}
